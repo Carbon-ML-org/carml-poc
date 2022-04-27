@@ -9,5 +9,10 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientIDWeb": "string",
             "AppClientID": "string"
         }
+    },
+    "function": {
+        "carmlpocCommonDependencies": {
+            "Arn": "string"
+        }
     }
 }

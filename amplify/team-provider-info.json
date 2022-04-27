@@ -10,6 +10,14 @@
       "StackName": "amplify-carmlpoc-dev-155942",
       "StackId": "arn:aws:cloudformation:us-east-1:618796661332:stack/amplify-carmlpoc-dev-155942/cca613e0-c5a3-11ec-a810-1229b957135d",
       "AmplifyAppId": "dz5ta2k4f3mex"
+    },
+    "categories": {
+      "function": {
+        "carmlpocCommonDependencies": {
+          "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
+          "s3Key": "amplify-builds/carmlpocCommonDependencies-LambdaLayerVersione231cfe5-build.zip"
+        }
+      }
     }
   }
 }

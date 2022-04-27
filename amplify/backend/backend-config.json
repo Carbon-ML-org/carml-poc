@@ -31,5 +31,12 @@
         ]
       }
     }
+  },
+  "function": {
+    "carmlpocCommonDependencies": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
+    }
   }
 }

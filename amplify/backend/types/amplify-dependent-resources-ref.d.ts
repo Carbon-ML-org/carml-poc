@@ -13,6 +13,12 @@ export type AmplifyDependentResourcesAttributes = {
     "function": {
         "carmlpocCommonDependencies": {
             "Arn": "string"
+        },
+        "getProduct": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
         }
     }
 }

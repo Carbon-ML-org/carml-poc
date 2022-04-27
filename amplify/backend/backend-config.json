@@ -43,5 +43,21 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "api": {
+    "api3f80812f": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "getProduct",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
   }
 }

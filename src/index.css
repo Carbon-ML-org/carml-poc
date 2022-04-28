@@ -1,13 +1,105 @@
+@import "@aws-amplify/ui-react/styles.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+
+:root {
+  --carml-primary-color: #655bef;
+  --carml-primary-light-color: #837bf2;
+  --carml-primary-dark-color: #463fa7;
+  --carml-primary-deactive: #ecebff;
+  --carml-primary-dark-deactive: #cccaf4;
+  --carml-secondary-color: #49d8cd;
+  --carml-gray-color: #c9cacb;
+  --amplify-fonts-default-variable: "Open Sans";
+  --amplify-fonts-default-static: "Open Sans";
+  --amplify-components-authenticator-modal-background-color: #fafafa;
+  --amplify-components-tabs-item-active-border-color: var(
+    --carml-primary-color
+  );
+  --amplify-components-tabs-item-active-color: var(--carml-primary-color);
+  --amplify-components-tabs-item-hover-color: var(--carml-primary-light-color);
+  --amplify-components-authenticator-state-inactive-background-color: var(
+    --carml-primary-deactive
+  );
+  --amplify-components-authenticator-router-border-width: 0;
+  --amplify-components-authenticator-router-box-shadow: 0 2px 5px
+    rgba(0, 0, 0, 0.25);
+
+  --amplify-border-widths-small: 0.125rem;
+  --amplify-border-widths-medium: 0.25rem;
+  --amplify-border-widths-large: 0.5rem;
+  --amplify-colors-radii-small: 0;
+  --amplify-colors-radii-medium: 0.125rem;
+  --amplify-colors-radii-large: 0.25rem;
+  --amplify-radii-small: 0.25rem;
+  --amplify-radii-medium: 0.5rem;
+  --amplify-radii-large: 0.75rem;
+  --amplify-space-small: 1rem;
+  --amplify-space-medium: 1.5rem;
+  --amplify-space-large: 2rem;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.amplify-tabs-item {
+  color: var(--carml-primary-color);
+  font-weight: 400;
+}
+
+.amplify-tabs-item[data-state="inactive"] {
+  border-color: var(--carml-primary-dark-deactive);
+}
+
+.amplify-button {
+  border-color: var(--carml-gray-color);
+}
+
+.amplify-button:hover,
+.amplify-button:active,
+.amplify-button:focus {
+  background-color: var(--carml-primary-deactive);
+  border-color: var(--carml-gray-color);
+}
+
+.amplify-button[data-variation="primary"] {
+  background-color: var(--carml-primary-color);
+}
+
+.amplify-button[data-variation="primary"]:hover {
+  background-color: var(--carml-primary-light-color);
+}
+
+.amplify-button[data-variation="primary"]:active,
+.amplify-button[data-variation="primary"]:focus {
+  background-color: var(--carml-primary-dark-color);
+}
+
+.amplify-link {
+  color: var(--carml-primary-color);
+}
+
+.amplify-link:hover {
+  color: var(--carml-primary-color);
+  text-decoration: underline;
+}
+
+.amplify-select,
+.amplify-input,
+.amplify-textarea {
+  border-color: var(--carml-gray-color);
+}
+
+h3.amplify-heading {
+  font-weight: 300;
 }

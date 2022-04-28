@@ -8,7 +8,7 @@ export default function UIMap({ zoom = 8, lat, lng }) {
   return (
     <div style={{ height: "130px", width: "100%" }}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyA4Pz0dq3mnJp0cTkgXCznyWxDOMuVMXRk" }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_KEY }}
         center={{ lat, lng }}
         defaultZoom={zoom}
       />

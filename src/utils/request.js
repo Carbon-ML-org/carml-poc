@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://b9rcuxd7ik.execute-api.us-west-2.amazonaws.com/staging",
+  baseURL: process.env.REACT_APP_CARML_API_ENDPOINT,
   headers: {
     "Content-type": "application/json",
   },

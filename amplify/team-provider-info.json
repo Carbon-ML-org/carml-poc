@@ -15,7 +15,7 @@
       "function": {
         "carmlpocCommonDependencies": {
           "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
-          "s3Key": "amplify-builds/carmlpocCommonDependencies-LambdaLayerVersionb2f98392-build.zip"
+          "s3Key": "amplify-builds/carmlpocCommonDependencies-LambdaLayerVersion00ce5bbd-build.zip"
         },
         "getProduct": {
           "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",

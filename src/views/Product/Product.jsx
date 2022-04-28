@@ -16,7 +16,6 @@ export default function ProductView() {
   const dispatch = useDispatch();
   const { product, status } = useSelector((state) => state.product);
   const { headings, resetHeadings } = useHeadings();
-  console.log("headings:", headings);
 
   useEffect(() => {
     setTimeout(() => {

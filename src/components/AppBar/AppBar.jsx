@@ -39,7 +39,7 @@ export default function AppBar() {
         <MuiAppBar>
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Product
+              Message Type
             </Typography>
             <IconButton
               size="large"

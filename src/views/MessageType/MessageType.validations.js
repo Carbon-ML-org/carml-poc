@@ -1,7 +1,7 @@
 import { boolean, date, number, object, string } from "yup";
 
 export default object({
-  product: object({
+  messageType: object({
     name: string(),
     isVerified: boolean(),
     hasCarbonCredit: boolean(),

@@ -35,19 +35,19 @@ import UIDateTimePicker from "../../components/UIDateTimePicker/UIDateTimePicker
 import UIMap from "../../components/UIMap/UIMap";
 import UISwitch from "../../components/UISwitch/UISwitch";
 import UITextField from "../../components/UITextField/UITextField";
-import productValidations from "./Product.validations";
-import { SCode, SForm } from "./Product.styles";
+import messageTypeValidations from "./MessageType.validations";
+import { SCode, SForm } from "./MessageType.styles";
 import { TabContext, TabPanel } from "@mui/lab";
 
 /**
- * ProductForm
+ * MessageTypeForm
  * -----------------------------------------------------------
  */
-export default function ProductForm({ defaultValues, onSectionsChange }) {
+export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
   const methods = useForm({
     defaultValues,
     mode: "onChange",
-    resolver: yupResolver(productValidations),
+    resolver: yupResolver(messageTypeValidations),
     reValidateMode: "onChange",
     shouldFocusError: true,
   });
@@ -56,16 +56,16 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
   const beautyXml = new XmlBeautify();
 
   const [verifierVisibility, setVerifierVisibility] = useState(
-    methods.getValues(get("product.isVerified"))
+    methods.getValues(get("messageType.isVerified"))
   );
 
   const [carbonCreditVisibility, setCarbonCreditVisibility] = useState(
-    methods.getValues(get("product.hasCarbonCredit"))
+    methods.getValues(get("messageType.hasCarbonCredit"))
   );
 
   const [measureLocation, setMeasureLocation] = useState({
-    lat: methods.getValues("product.measurement.location.lat"),
-    lng: methods.getValues("product.measurement.location.lng"),
+    lat: methods.getValues("messageType.measurement.location.lat"),
+    lng: methods.getValues("messageType.measurement.location.lng"),
   });
 
   const [open, setOpen] = useState(false);
@@ -186,7 +186,7 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={12}>
                     <UITextField
-                      name="product.name"
+                      name="messageType.name"
                       label="Name"
                       placeholder="Name of product or service"
                     />
@@ -195,13 +195,13 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                     <UISwitch
                       defaultChecked
                       label="Is Verified"
-                      name="product.isVerified"
+                      name="messageType.isVerified"
                       onChange={handleIsVerifiedChange}
                     />
                     <UISwitch
                       defaultChecked
                       label="Carbon Credit"
-                      name="product.hasCarbonCredit"
+                      name="messageType.hasCarbonCredit"
                       onChange={handleCarbonCreditChange}
                     />
                   </Grid>
@@ -233,16 +233,22 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={12}>
                     <UITextField
-                      name="product.volume.descriptor"
+                      name="messageType.volume.descriptor"
                       label="Descriptor"
                       disabled
                     />
                   </Grid>
                   <Grid item xs={6}>
-                    <UITextField name="product.volume.amount" label="Amount" />
+                    <UITextField
+                      name="messageType.volume.amount"
+                      label="Amount"
+                    />
                   </Grid>
                   <Grid item xs={6}>
-                    <UITextField name="product.volume.units" label="Units" />
+                    <UITextField
+                      name="messageType.volume.units"
+                      label="Units"
+                    />
                   </Grid>
                 </Grid>
               </CardContent>
@@ -272,15 +278,18 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={12}>
                     <UITextField
-                      name="product.identifier.source"
+                      name="messageType.identifier.source"
                       label="Source"
                     />
                   </Grid>
                   <Grid item xs={6}>
-                    <UITextField name="product.identifier.type" label="Type" />
+                    <UITextField
+                      name="messageType.identifier.type"
+                      label="Type"
+                    />
                   </Grid>
                   <Grid item xs={6}>
-                    <UITextField name="product.identifier.id" label="Id" />
+                    <UITextField name="messageType.identifier.id" label="Id" />
                   </Grid>
                 </Grid>
               </CardContent>
@@ -310,7 +319,7 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={12}>
                     <UITextField
-                      name="product.reporter.source"
+                      name="messageType.reporter.source"
                       label="Source"
                     />
                   </Grid>
@@ -342,51 +351,51 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={8}>
                     <UITextField
-                      name="product.measurement.source"
+                      name="messageType.measurement.source"
                       label="Source"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UIDateTimePicker
-                      name="product.measurement.date"
+                      name="messageType.measurement.date"
                       label="Date"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UITextField
-                      name="product.measurement.origin"
+                      name="messageType.measurement.origin"
                       label="Origin"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UITextField
-                      name="product.measurement.method"
+                      name="messageType.measurement.method"
                       label="Method"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UITextField
-                      name="product.measurement.calculation"
+                      name="messageType.measurement.calculation"
                       label="Calculation"
                     />
                   </Grid>
                   <Grid container spacing={2} item xs={6}>
                     <Grid item xs={12}>
                       <UITextField
-                        name="product.measurement.address"
+                        name="messageType.measurement.address"
                         label="Address"
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="product.measurement.location.lng"
+                        name="messageType.measurement.location.lng"
                         label="Lng"
                         onChange={handleMeasureLngChange}
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="product.measurement.location.lat"
+                        name="messageType.measurement.location.lat"
                         label="Lat"
                         onChange={handleMeasureLatChange}
                       />
@@ -424,19 +433,19 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                   <Grid container spacing={2} maxWidth="md">
                     <Grid item xs={12}>
                       <UITextField
-                        name="product.verifier.source"
+                        name="messageType.verifier.source"
                         label="Source"
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="product.verifier.origin"
+                        name="messageType.verifier.origin"
                         label="Origin"
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="product.verifier.company"
+                        name="messageType.verifier.company"
                         label="Company"
                       />
                     </Grid>
@@ -470,16 +479,19 @@ export default function ProductForm({ defaultValues, onSectionsChange }) {
                   <Grid container spacing={2} maxWidth="md">
                     <Grid item xs={4}>
                       <UIYearPicker
-                        name="product.carbonCredit.vintageYear"
+                        name="messageType.carbonCredit.vintageYear"
                         label="Vintage Year"
                       />
                     </Grid>
                     <Grid item xs={4}>
-                      <UITextField name="product.carbonCredit.id" label="Id" />
+                      <UITextField
+                        name="messageType.carbonCredit.id"
+                        label="Id"
+                      />
                     </Grid>
                     <Grid item xs={4}>
                       <UITextField
-                        name="product.carbonCredit.carbonOffsetAmount"
+                        name="messageType.carbonCredit.carbonOffsetAmount"
                         label="Carbon Offset Amount"
                       />
                     </Grid>

@@ -5,8 +5,8 @@ import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import awsExports from "./aws-exports";
 import UILayout from "./components/UILayout/UILayout";
-import ProductsView from "./views/Products/Products";
-import ProductView from "./views/Product/Product";
+import MessageTypesView from "./views/MessageTypes/MessageTypes";
+import MessageTypeView from "./views/MessageType/MessageType";
 import ProductSelection from "./components/ProductSelection/ProductSelection";
 import AuthHeader from "./components/AuthHeader/AuthHeader";
 import AuthFooter from "./components/AuthFooter/AuthFooter";
@@ -19,11 +19,11 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<UILayout />}>
-        <Route path="products" element={<ProductsView />}>
+        <Route path="message-types" element={<MessageTypesView />}>
           <Route index element={<ProductSelection />} />
-          <Route path=":id" element={<ProductView />} />
+          <Route path=":id" element={<MessageTypeView />} />
         </Route>
-        <Route index element={<Navigate replace to="products" />} />
+        <Route index element={<Navigate replace to="message-types" />} />
       </Route>
     </Routes>
   );

@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { reducer as productReducer } from "./product/product.slice";
+import { reducer as messageTypeReducer } from "./messageType/messageType.slice";
 
 const store = configureStore({
   devTools: true,
   reducer: {
-    product: productReducer,
+    messageType: messageTypeReducer,
   },
 });
 

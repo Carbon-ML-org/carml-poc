@@ -2,24 +2,24 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, CircularProgress, Grid } from "@mui/material";
-import { getProduct } from "../../store/product/product.actions";
+import { getMessageType } from "../../store/messageType/messageType.actions";
 import UITableOfContents from "../../components/UITableOfContents/UITableOfContents";
-import ProductForm from "./ProductForm";
+import MessageTypeForm from "./MessageTypeForm";
 import { useHeadings } from "../../hooks/useHeadings";
 
 /**
- * ProductView
+ * MessageTypeView
  * -----------------------------------------------------------
  */
-export default function ProductView() {
+export default function MessageTypeView() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { product, status } = useSelector((state) => state.product);
+  const { messageType, status } = useSelector((state) => state.messageType);
   const { headings, resetHeadings } = useHeadings();
 
   useEffect(() => {
     setTimeout(() => {
-      dispatch(getProduct(id));
+      dispatch(getMessageType(id));
     }, 2000);
   }, []); // eslint-disable-line
 
@@ -38,8 +38,8 @@ export default function ProductView() {
         component={"main"}
       >
         <Grid item xs={12} md={10}>
-          <ProductForm
-            defaultValues={{ product }}
+          <MessageTypeForm
+            defaultValues={{ messageType }}
             onSectionsChange={() => resetHeadings()}
           />
         </Grid>

@@ -150,8 +150,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           mb={2}
           sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
         >
-          Example PoC for
-          <SCode style={{ marginLeft: "0.75rem" }}>{`<CarML>`}</SCode>
+          PoC Message Type - General
         </Typography>
         <Typography variant="h5" component="div" mb={1}>
           <SCode>{`<CarML>`}</SCode> Standard for CO2e Declaration

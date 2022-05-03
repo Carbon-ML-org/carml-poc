@@ -10,10 +10,16 @@ export const SNav = styled.nav`
 
 export const SUl = styled.ul`
   list-style-type: none;
-  margin: 0;
+  margin: 1rem 0 0;
   padding: 0;
 `;
 
 export const SLi = styled.li`
-  padding: 0;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+  padding: 0 0 0 0.5rem;
+
+  a {
+    text-decoration: none;
+  }
 `;

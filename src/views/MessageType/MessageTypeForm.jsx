@@ -395,7 +395,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       placement="right"
                       arrow
                     >
-                      <Typography id="measurement" variant="h5">
+                      <Typography id="location" variant="h5">
                         Location
                       </Typography>
                     </Tooltip>

@@ -8,6 +8,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import BalanceIcon from "@mui/icons-material/Balance";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import HistoryEduIcon from "@mui/icons-material/HistoryEdu";
+import MapIcon from "@mui/icons-material/Map";
 import ScaleIcon from "@mui/icons-material/Scale";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import ReceiptIcon from "@mui/icons-material/Receipt";
@@ -64,8 +65,8 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
   );
 
   const [measureLocation, setMeasureLocation] = useState({
-    lat: methods.getValues("messageType.measurement.location.lat"),
-    lng: methods.getValues("messageType.measurement.location.lng"),
+    lat: methods.getValues("messageType.location.location.lat"),
+    lng: methods.getValues("messageType.location.location.lng"),
   });
 
   const [open, setOpen] = useState(false);
@@ -388,7 +389,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
               <CardHeader
                 title={
                   <Stack direction="row" alignItems="center" gap={1}>
-                    <ScaleIcon color="primary" />
+                    <MapIcon color="primary" />
                     <Tooltip
                       title="Lorem ipsum dolor sit amet"
                       placement="right"

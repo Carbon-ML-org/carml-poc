@@ -18,9 +18,7 @@ export default function MessageTypeView() {
   const { headings, resetHeadings } = useHeadings();
 
   useEffect(() => {
-    setTimeout(() => {
-      dispatch(getMessageType(id));
-    }, 2000);
+    dispatch(getMessageType(id));
   }, []); // eslint-disable-line
 
   if (status === "success") {
@@ -52,7 +50,14 @@ export default function MessageTypeView() {
     return <p>Not found!</p>;
   } else {
     return (
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          alignItems: "center",
+          display: "flex",
+          minHeight: "50rem",
+          justifyContent: "center",
+        }}
+      >
         <CircularProgress />
       </Box>
     );

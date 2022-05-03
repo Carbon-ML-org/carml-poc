@@ -208,52 +208,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
               </CardContent>
             </Card>
           </Grid>
-          {/* VOLUME */}
-          <Grid item xs={6}>
-            <Card sx={{ width: "100%" }}>
-              <CardHeader
-                title={
-                  <Stack direction="row" alignItems="center" gap={1}>
-                    <BalanceIcon color="primary" />
-                    <Tooltip
-                      title="Lorem ipsum dolor sit amet"
-                      placement="right"
-                      arrow
-                    >
-                      <Typography id="volume" variant="h5">
-                        Volume
-                      </Typography>
-                    </Tooltip>
-                  </Stack>
-                }
-              />
-              <Divider />
-              <CardContent sx={{ py: 4 }}>
-                <Grid container spacing={2} maxWidth="md">
-                  <Grid item xs={12}>
-                    <UITextField
-                      name="messageType.volume.descriptor"
-                      label="Descriptor"
-                      disabled
-                    />
-                  </Grid>
-                  <Grid item xs={6}>
-                    <UITextField
-                      name="messageType.volume.amount"
-                      label="Amount"
-                    />
-                  </Grid>
-                  <Grid item xs={6}>
-                    <UITextField
-                      name="messageType.volume.units"
-                      label="Units"
-                    />
-                  </Grid>
-                </Grid>
-              </CardContent>
-            </Card>
-          </Grid>
-          {/* IDENTIFIER */}
+          {/* UNIQUE ID */}
           <Grid item xs={6}>
             <Card sx={{ width: "100%" }}>
               <CardHeader
@@ -266,7 +221,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       arrow
                     >
                       <Typography id="identifier" variant="h5">
-                        Identifier
+                        Unique ID
                       </Typography>
                     </Tooltip>
                   </Stack>
@@ -277,24 +232,69 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={12}>
                     <UITextField
-                      name="messageType.identifier.source"
-                      label="Source"
+                      name="messageType.uniqueId.uniqueIdSource"
+                      label="Unique ID Source"
                     />
                   </Grid>
                   <Grid item xs={6}>
                     <UITextField
-                      name="messageType.identifier.type"
+                      name="messageType.uniqueId.type"
                       label="Type"
                     />
                   </Grid>
                   <Grid item xs={6}>
-                    <UITextField name="messageType.identifier.id" label="Id" />
+                    <UITextField name="messageType.uniqueId.id" label="Id" />
                   </Grid>
                 </Grid>
               </CardContent>
             </Card>
           </Grid>
-          {/* REPORTER */}
+          {/* AMOUNT */}
+          <Grid item xs={6}>
+            <Card sx={{ width: "100%" }}>
+              <CardHeader
+                title={
+                  <Stack direction="row" alignItems="center" gap={1}>
+                    <BalanceIcon color="primary" />
+                    <Tooltip
+                      title="Lorem ipsum dolor sit amet"
+                      placement="right"
+                      arrow
+                    >
+                      <Typography id="volume" variant="h5">
+                        Amount
+                      </Typography>
+                    </Tooltip>
+                  </Stack>
+                }
+              />
+              <Divider />
+              <CardContent sx={{ py: 4 }}>
+                <Grid container spacing={2} maxWidth="md">
+                  <Grid item xs={12}>
+                    <UITextField
+                      name="messageType.amount.declaredTrait"
+                      label="Declared Trait"
+                      disabled
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <UITextField
+                      name="messageType.amount.amount"
+                      label="Amount"
+                    />
+                  </Grid>
+                  <Grid item xs={6}>
+                    <UITextField
+                      name="messageType.amount.units"
+                      label="Units"
+                    />
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+          {/* DECLARED TRAIT DATA SOURCE */}
           <Grid item xs={12}>
             <Card sx={{ width: "100%" }}>
               <CardHeader
@@ -307,7 +307,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       arrow
                     >
                       <Typography id="reporter" variant="h5">
-                        Reporter
+                        Declared Trait Data Source
                       </Typography>
                     </Tooltip>
                   </Stack>
@@ -318,15 +318,15 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={12}>
                     <UITextField
-                      name="messageType.reporter.source"
-                      label="Source"
+                      name="messageType.declaredTraitDataSource.declaredTraitDataSource"
+                      label="Declared Trait Data Source"
                     />
                   </Grid>
                 </Grid>
               </CardContent>
             </Card>
           </Grid>
-          {/* MEASUREMENT */}
+          {/* DECLARED MEASUREMENT METHODOLOGY */}
           <Grid item xs={12}>
             <Card sx={{ width: "100%" }}>
               <CardHeader
@@ -339,7 +339,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       arrow
                     >
                       <Typography id="measurement" variant="h5">
-                        Measurement
+                        Declared Trait Measurement Methodology
                       </Typography>
                     </Tooltip>
                   </Stack>
@@ -350,51 +350,83 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                 <Grid container spacing={2} maxWidth="md">
                   <Grid item xs={8}>
                     <UITextField
-                      name="messageType.measurement.source"
-                      label="Source"
+                      name="messageType.declaredTraitMeasurementMethodology.declaredTraitMeasurementMethod"
+                      label="Declared Trait Measurement Method"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UIDateTimePicker
-                      name="messageType.measurement.date"
+                      name="messageType.declaredTraitMeasurementMethodology.date"
                       label="Date"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UITextField
-                      name="messageType.measurement.origin"
+                      name="messageType.declaredTraitMeasurementMethodology.origin"
                       label="Origin"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UITextField
-                      name="messageType.measurement.method"
-                      label="Method"
+                      name="messageType.declaredTraitMeasurementMethodology.methodology"
+                      label="Methodology"
                     />
                   </Grid>
                   <Grid item xs={4}>
                     <UITextField
-                      name="messageType.measurement.calculation"
+                      name="messageType.declaredTraitMeasurementMethodology.calculation"
                       label="Calculation"
+                    />
+                  </Grid>
+                </Grid>
+              </CardContent>
+            </Card>
+          </Grid>
+          {/* LOCATION */}
+          <Grid item xs={12}>
+            <Card sx={{ width: "100%" }}>
+              <CardHeader
+                title={
+                  <Stack direction="row" alignItems="center" gap={1}>
+                    <ScaleIcon color="primary" />
+                    <Tooltip
+                      title="Lorem ipsum dolor sit amet"
+                      placement="right"
+                      arrow
+                    >
+                      <Typography id="measurement" variant="h5">
+                        Location
+                      </Typography>
+                    </Tooltip>
+                  </Stack>
+                }
+              />
+              <Divider />
+              <CardContent>
+                <Grid container spacing={2} maxWidth="md">
+                  <Grid item xs={12}>
+                    <UITextField
+                      name="messageType.location.locationType"
+                      label="Location Type"
                     />
                   </Grid>
                   <Grid container spacing={2} item xs={6}>
                     <Grid item xs={12}>
                       <UITextField
-                        name="messageType.measurement.address"
+                        name="messageType.location.address"
                         label="Address"
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="messageType.measurement.location.lng"
+                        name="messageType.location.location.lng"
                         label="Lng"
                         onChange={handleMeasureLngChange}
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="messageType.measurement.location.lat"
+                        name="messageType.location.location.lat"
                         label="Lat"
                         onChange={handleMeasureLatChange}
                       />
@@ -407,7 +439,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
               </CardContent>
             </Card>
           </Grid>
-          {/* Verifier */}
+          {/* VERIFYING ENTITY */}
           {verifierVisibility && (
             <Grid item xs={12}>
               <Card sx={{ width: "100%" }}>
@@ -421,7 +453,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                         arrow
                       >
                         <Typography id="verifier" variant="h5">
-                          Verifier
+                          Verifying Entity
                         </Typography>
                       </Tooltip>
                     </Stack>
@@ -432,20 +464,32 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                   <Grid container spacing={2} maxWidth="md">
                     <Grid item xs={12}>
                       <UITextField
-                        name="messageType.verifier.source"
-                        label="Source"
+                        name="messageType.verifyingEntity.declaredTraitVerifyingEntity"
+                        label="Declared Trait Verifying Entity"
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="messageType.verifier.origin"
+                        name="messageType.verifyingEntity.origin"
                         label="Origin"
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <UITextField
-                        name="messageType.verifier.company"
+                        name="messageType.verifyingEntity.company"
                         label="Company"
+                      />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <UITextField
+                        name="messageType.verifyingEntity.credentials"
+                        label="Credentials"
+                      />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <UIDateTimePicker
+                        name="messageType.verifyingEntity.credentialsExpirationDate"
+                        label="Credentials Expiration Date"
                       />
                     </Grid>
                   </Grid>
@@ -453,7 +497,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
               </Card>
             </Grid>
           )}
-          {/* Verifier */}
+          {/* CARBON CREDIT */}
           {carbonCreditVisibility && (
             <Grid item xs={12}>
               <Card sx={{ width: "100%" }}>

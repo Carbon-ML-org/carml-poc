@@ -5,35 +5,41 @@ export default object({
     name: string(),
     isVerified: boolean(),
     hasCarbonCredit: boolean(),
-    volume: object({
+    id: string(),
+    uniqueId: object({
+      uniqueIdSource: string(),
+      type: string(),
+      id: string(),
+    }),
+    amount: object({
       amount: number(),
-      descriptor: string(),
+      declaredTrait: string(),
       units: string(),
     }),
-    measurement: object({
+    declaredTraitDataSource: object({
+      declaredTraitDataSource: string(),
+    }),
+    declaredTraitMeasurementMethodology: object({
       date: date(),
+      declaredTraitMeasurementMethod: string(),
+      origin: string(),
+      methodology: string(),
+      calculation: string(),
+    }),
+    location: object({
       address: string(),
+      locationType: string(),
       location: object({
         lat: number(),
         lng: number(),
       }),
-      source: string(),
-      origin: string(),
-      method: string(),
-      calculation: string(),
     }),
-    identifier: object({
-      source: string(),
-      type: string(),
-      id: string(),
-    }),
-    reporter: object({
-      source: string(),
-    }),
-    verifier: object({
-      source: string(),
+    verifyingEntity: object({
+      declaredTraitVerifyingEntity: string(),
       origin: string(),
       company: string(),
+      credentials: string(),
+      credentialsExpirationDate: string(),
     }),
     carbonCredit: object({
       vintageYear: date(),

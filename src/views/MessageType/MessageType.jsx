@@ -37,14 +37,14 @@ export default function MessageTypeView() {
         }}
         component={"main"}
       >
+        <Grid item xs={12} md={2} position="relative" pt="9rem">
+          <UITableOfContents headings={headings} />
+        </Grid>
         <Grid item xs={12} md={10}>
           <MessageTypeForm
             defaultValues={{ messageType }}
             onSectionsChange={() => resetHeadings()}
           />
-        </Grid>
-        <Grid item xs={12} md={2} position="relative" pt="9rem">
-          <UITableOfContents headings={headings} />
         </Grid>
       </Grid>
     );

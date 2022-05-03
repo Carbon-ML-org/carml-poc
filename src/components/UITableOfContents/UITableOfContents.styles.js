@@ -16,5 +16,9 @@ export const SUl = styled.ul`
 `;
 
 export const SLi = styled.li`
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+
+  &.active {
+    background-color: rgba(0, 0, 0, 0.025);
+  }
 `;

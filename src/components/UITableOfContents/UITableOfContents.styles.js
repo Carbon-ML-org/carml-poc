@@ -9,17 +9,12 @@ export const SNav = styled.nav`
 `;
 
 export const SUl = styled.ul`
+  border-left: 3px solid rgba(0, 0, 0, 0.1);
   list-style-type: none;
   margin: 1rem 0 0;
   padding: 0;
 `;
 
 export const SLi = styled.li`
-  border-left: 2px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 0.5rem;
-  padding: 0 0 0 0.5rem;
-
-  a {
-    text-decoration: none;
-  }
+  padding: 0.5rem;
 `;

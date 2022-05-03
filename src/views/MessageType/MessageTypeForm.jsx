@@ -18,7 +18,6 @@ import { github } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import {
   Card,
   CardContent,
-  CardHeader,
   Dialog,
   DialogTitle,
   Divider,
@@ -28,6 +27,7 @@ import {
   Tabs,
   Typography,
 } from "@mui/material";
+import { TabContext, TabPanel } from "@mui/lab";
 import { FormProvider, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import UIButton from "../../components/UIButton/UIButton";
@@ -37,8 +37,7 @@ import UIMap from "../../components/UIMap/UIMap";
 import UISwitch from "../../components/UISwitch/UISwitch";
 import UITextField from "../../components/UITextField/UITextField";
 import messageTypeValidations from "./MessageType.validations";
-import { SCode, SForm } from "./MessageType.styles";
-import { TabContext, TabPanel } from "@mui/lab";
+import { SCode, SForm, SCardHeader } from "./MessageType.styles";
 
 /**
  * MessageTypeForm
@@ -165,7 +164,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
         <Grid container spacing={2} mb={4}>
           <Grid item xs={12}>
             <Card sx={{ width: "100%" }}>
-              <CardHeader
+              <SCardHeader
                 title={
                   <Stack direction="row" alignItems="center" gap={1}>
                     <DescriptionIcon color="primary" />
@@ -212,7 +211,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           {/* UNIQUE ID */}
           <Grid item xs={6}>
             <Card sx={{ width: "100%" }}>
-              <CardHeader
+              <SCardHeader
                 title={
                   <Stack direction="row" alignItems="center" gap={1}>
                     <AssignmentIcon color="primary" />
@@ -253,7 +252,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           {/* AMOUNT */}
           <Grid item xs={6}>
             <Card sx={{ width: "100%" }}>
-              <CardHeader
+              <SCardHeader
                 title={
                   <Stack direction="row" alignItems="center" gap={1}>
                     <BalanceIcon color="primary" />
@@ -298,7 +297,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           {/* DECLARED TRAIT DATA SOURCE */}
           <Grid item xs={12}>
             <Card sx={{ width: "100%" }}>
-              <CardHeader
+              <SCardHeader
                 title={
                   <Stack direction="row" alignItems="center" gap={1}>
                     <HistoryEduIcon color="primary" />
@@ -330,7 +329,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           {/* DECLARED MEASUREMENT METHODOLOGY */}
           <Grid item xs={12}>
             <Card sx={{ width: "100%" }}>
-              <CardHeader
+              <SCardHeader
                 title={
                   <Stack direction="row" alignItems="center" gap={1}>
                     <ScaleIcon color="primary" />
@@ -386,7 +385,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           {/* LOCATION */}
           <Grid item xs={12}>
             <Card sx={{ width: "100%" }}>
-              <CardHeader
+              <SCardHeader
                 title={
                   <Stack direction="row" alignItems="center" gap={1}>
                     <MapIcon color="primary" />
@@ -444,7 +443,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           {verifierVisibility && (
             <Grid item xs={12}>
               <Card sx={{ width: "100%" }}>
-                <CardHeader
+                <SCardHeader
                   title={
                     <Stack direction="row" alignItems="center" gap={1}>
                       <VerifiedIcon color="primary" />
@@ -502,7 +501,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
           {carbonCreditVisibility && (
             <Grid item xs={12}>
               <Card sx={{ width: "100%" }}>
-                <CardHeader
+                <SCardHeader
                   title={
                     <Stack direction="row" alignItems="center" gap={1}>
                       <ReceiptIcon color="primary" />

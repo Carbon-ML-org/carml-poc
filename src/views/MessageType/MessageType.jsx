@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, CircularProgress, Grid } from "@mui/material";
@@ -6,6 +6,7 @@ import { getMessageType } from "../../store/messageType/messageType.actions";
 import UITableOfContents from "../../components/UITableOfContents/UITableOfContents";
 import MessageTypeForm from "./MessageTypeForm";
 import { useHeadings } from "../../hooks/useHeadings";
+import useHeadingsObserver from "../../hooks/useHeadingsObserver";
 
 /**
  * MessageTypeView
@@ -15,7 +16,9 @@ export default function MessageTypeView() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { messageType, status } = useSelector((state) => state.messageType);
+  const [activeIds, setActiveIds] = useState([]);
   const { headings, resetHeadings } = useHeadings();
+  useHeadingsObserver(setActiveIds, status === "success");
 
   useEffect(() => {
     dispatch(getMessageType(id));
@@ -35,10 +38,10 @@ export default function MessageTypeView() {
         }}
         component={"main"}
       >
-        <Grid item xs={12} md={2} position="relative" pt="9rem">
-          <UITableOfContents headings={headings} />
+        <Grid item xs={12} md={3} position="relative" pt="9rem">
+          <UITableOfContents headings={headings} activeIds={activeIds} />
         </Grid>
-        <Grid item xs={12} md={10}>
+        <Grid item xs={12} md={9}>
           <MessageTypeForm
             defaultValues={{ messageType }}
             onSectionsChange={() => resetHeadings()}

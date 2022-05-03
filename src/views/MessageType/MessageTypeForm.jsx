@@ -220,7 +220,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       placement="right"
                       arrow
                     >
-                      <Typography id="identifier" variant="h5">
+                      <Typography id="unique-id" variant="h5">
                         Unique ID
                       </Typography>
                     </Tooltip>
@@ -261,7 +261,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       placement="right"
                       arrow
                     >
-                      <Typography id="volume" variant="h5">
+                      <Typography id="amount" variant="h5">
                         Amount
                       </Typography>
                     </Tooltip>
@@ -306,7 +306,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       placement="right"
                       arrow
                     >
-                      <Typography id="reporter" variant="h5">
+                      <Typography id="declared-trait-data-source" variant="h5">
                         Declared Trait Data Source
                       </Typography>
                     </Tooltip>
@@ -338,7 +338,10 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                       placement="right"
                       arrow
                     >
-                      <Typography id="measurement" variant="h5">
+                      <Typography
+                        id="declared-trait-measurement-methodology"
+                        variant="h5"
+                      >
                         Declared Trait Measurement Methodology
                       </Typography>
                     </Tooltip>
@@ -452,7 +455,7 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
                         placement="right"
                         arrow
                       >
-                        <Typography id="verifier" variant="h5">
+                        <Typography id="verifying-entity" variant="h5">
                           Verifying Entity
                         </Typography>
                       </Tooltip>

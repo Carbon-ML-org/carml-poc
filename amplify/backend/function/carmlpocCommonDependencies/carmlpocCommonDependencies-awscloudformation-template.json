@@ -20,7 +20,7 @@
     }
   },
   "Resources": {
-    "LambdaLayerVersion68a13b3f": {
+    "LambdaLayerVersionf390562e": {
       "Type": "AWS::Lambda::LayerVersion",
       "Properties": {
         "CompatibleRuntimes": [
@@ -30,9 +30,9 @@
           "S3Bucket": {
             "Ref": "deploymentBucketName"
           },
-          "S3Key": "amplify-builds/carmlpocCommonDependencies-LambdaLayerVersion68a13b3f-build.zip"
+          "S3Key": "amplify-builds/carmlpocCommonDependencies-LambdaLayerVersionf390562e-build.zip"
         },
-        "Description": "Updated layer version 2022-04-28T07:10:51.762Z",
+        "Description": "Updated layer version 2022-05-03T14:44:57.214Z",
         "LayerName": {
           "Fn::Sub": [
             "carmlpocCommonDependencies-${env}",
@@ -47,11 +47,11 @@
       "DeletionPolicy": "Delete",
       "UpdateReplacePolicy": "Retain"
     },
-    "LambdaLayerPermissionPrivate68a13b3f": {
+    "LambdaLayerPermissionPrivatef390562e": {
       "Type": "AWS::Lambda::LayerVersionPermission",
       "Properties": {
         "Action": "lambda:GetLayerVersion",
-        "LayerVersionArn": "arn:aws:lambda:us-east-1:618796661332:layer:carmlpocCommonDependencies-dev:17",
+        "LayerVersionArn": "arn:aws:lambda:us-east-1:618796661332:layer:carmlpocCommonDependencies-dev:19",
         "Principal": {
           "Ref": "AWS::AccountId"
         }
@@ -61,7 +61,7 @@
   "Outputs": {
     "Arn": {
       "Value": {
-        "Ref": "LambdaLayerVersion68a13b3f"
+        "Ref": "LambdaLayerVersionf390562e"
       }
     }
   }

@@ -27,7 +27,7 @@
         },
         "handleMessageTypes": {
           "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
-          "s3Key": "amplify-builds/handleMessageTypes-575a7243574f46723669-build.zip"
+          "s3Key": "amplify-builds/handleMessageTypes-667769444858796b3061-build.zip"
         },
         "handleIndustries": {
           "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",

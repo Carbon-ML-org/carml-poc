@@ -34,7 +34,7 @@ export default function AppBar() {
     setAnchorEl(null);
   };
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <ElevationScroll>
         <MuiAppBar>
           <Toolbar>

@@ -4,7 +4,7 @@ import { Amplify } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 import awsExports from "./aws-exports";
-import UILayout from "./components/UILayout/UILayout";
+import AppLayout from "./components/AppLayout/AppLayout";
 import MessageTypesView from "./views/MessageTypes/MessageTypes";
 import MessageTypeView from "./views/MessageType/MessageType";
 import ProductSelection from "./components/ProductSelection/ProductSelection";
@@ -18,7 +18,7 @@ Amplify.configure(awsExports);
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<UILayout />}>
+      <Route path="/" element={<AppLayout />}>
         <Route path="message-types" element={<MessageTypesView />}>
           <Route index element={<ProductSelection />} />
           <Route path=":id" element={<MessageTypeView />} />

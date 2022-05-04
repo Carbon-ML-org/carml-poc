@@ -25,29 +25,39 @@ export default function MessageTypeView() {
   }, []); // eslint-disable-line
 
   if (status === "success") {
+    // return (
+    //   <Grid
+    //     columnSpacing={{ xs: 0, md: 4 }}
+    //     sx={{
+    //       width: "100%",
+    //       height: "100%",
+    //       px: 2,
+    //       pt: 12,
+    //       pb: 4,
+    //     }}
+    //     component={"main"}
+    //   >
+    //     <Grid item xs={12} md={3} position="relative" pt="9rem">
+    //       <UITableOfContents headings={headings} activeIds={activeIds} />
+    //     </Grid>
+    //     <Grid item xs={12} md={9}>
+    //       <MessageTypeForm
+    //         defaultValues={{ messageType }}
+    //         onSectionsChange={() => resetHeadings()}
+    //       />
+    //     </Grid>
+    //   </Grid>
+    // );
     return (
-      <Grid
-        container
-        columnSpacing={{ xs: 0, md: 4 }}
-        sx={{
-          width: "100%",
-          height: "100%",
-          px: 2,
-          pt: 12,
-          pb: 4,
-        }}
-        component={"main"}
-      >
-        <Grid item xs={12} md={3} position="relative" pt="9rem">
+      <>
+        <div style={{ position: "relative", height: "100%" }}>
           <UITableOfContents headings={headings} activeIds={activeIds} />
-        </Grid>
-        <Grid item xs={12} md={9}>
-          <MessageTypeForm
-            defaultValues={{ messageType }}
-            onSectionsChange={() => resetHeadings()}
-          />
-        </Grid>
-      </Grid>
+        </div>
+        <MessageTypeForm
+          defaultValues={{ messageType }}
+          onSectionsChange={() => resetHeadings()}
+        />
+      </>
     );
   } else if (status === "failed") {
     return <p>Not found!</p>;

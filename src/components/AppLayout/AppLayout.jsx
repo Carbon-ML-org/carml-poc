@@ -1,23 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Paper } from "@mui/material";
 import { Outlet } from "react-router-dom";
-import AppBar from "../AppBar/AppBar";
+import AppHeader from "../AppHeader/AppHeader";
 import AppSidebar from "../AppSidebar/AppSidebar";
 import AppMain from "../AppMain/AppMain";
 
 function AppLayout() {
-  const [open, setOpen] = useState(true);
-
   return (
     <Paper
       sx={{
-        bgcolor: "#fafafa",
+        bgcolor: "#ebedf0",
         minHeight: "100vh",
         display: "flex",
       }}
     >
-      <AppBar />
-      <AppSidebar open={open} />
+      <AppHeader />
+      <AppSidebar />
       <AppMain>
         <Outlet />
       </AppMain>

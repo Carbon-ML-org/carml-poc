@@ -9,7 +9,6 @@ export const SNav = styled.nav`
 `;
 
 export const SUl = styled.ul`
-  border-left: 3px solid rgba(0, 0, 0, 0.1);
   list-style-type: none;
   margin: 1rem 0 0;
   padding: 0;
@@ -19,6 +18,6 @@ export const SLi = styled.li`
   padding: 0.5rem 1rem;
 
   &.active {
-    background-color: rgba(0, 0, 0, 0.025);
+    background-color: #f6f7f9;
   }
 `;

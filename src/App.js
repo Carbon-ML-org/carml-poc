@@ -14,8 +14,7 @@ import SignInFooter from "./components/SignInFooter/SignInFooter";
 
 Amplify.configure(awsExports);
 
-function App(props) {
-  console.log("props:", props);
+function App() {
   return (
     <Routes>
       <Route path="/" element={<AppLayout />}>

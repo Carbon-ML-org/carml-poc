@@ -6,11 +6,12 @@ export const SAppMain = styled.main`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
-  padding-top: 4rem;
+  padding-top: ${({ topMargin }) => topMargin}rem;
   position: relative;
+  width: 100%;
 
   & > * {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 
   & > :first-child {

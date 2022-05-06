@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from "react";
 import { useAuthenticator } from "@aws-amplify/ui-react";
-import { Avatar, IconButton, Menu, MenuItem, Typography } from "@mui/material";
+import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { darkColor } from "../../theme";
+import UIAvatar from "../UIAvatar/UIAvatar";
 import getInitials from "../../utils/getNameInitials";
 import getRandomColor from "../../utils/getRandomColor";
 import { SAppUsername } from "./AppUsername.styles";
@@ -27,11 +28,7 @@ function AppUsername() {
   return (
     <>
       <SAppUsername
-        avatar={
-          <Avatar sx={{ bgcolor: avatarBgColor }} aria-label="recipe">
-            {avatarInitials}
-          </Avatar>
-        }
+        avatar={<UIAvatar bgColor={avatarBgColor}>{avatarInitials}</UIAvatar>}
         action={
           <IconButton
             aria-label="settings"

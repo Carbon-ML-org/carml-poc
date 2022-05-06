@@ -8,7 +8,6 @@ function AppSidebar() {
   const { sidebarIsOpen, sidebarWidth, headerHeight } = useSelector(
     (state) => state.ui
   );
-  console.log("sidebarIsOpen:", sidebarIsOpen);
 
   return (
     <SAppSidebar

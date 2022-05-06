@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { CardHeader } from "@mui/material";
 
 export const SCode = styled.code`
-  background-color: #dad8fb;
+  background-color: #bbc5fb;
 `;
 
 export const SForm = styled.form`

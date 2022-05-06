@@ -1,8 +1,11 @@
+import React from "react";
+import { SMessageTypes } from "./MessageTypes.styles";
+
 function MessageTypes() {
   return (
-    <div>
+    <SMessageTypes>
       <p>Create Message Type here...</p>
-    </div>
+    </SMessageTypes>
   );
 }
 

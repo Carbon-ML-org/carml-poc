@@ -20,6 +20,7 @@ export const SAppSidebar = styled(Drawer, {
 export const SAppSidebarHeader = styled.div`
   align-items: center;
   background-color: ${darkBgColor};
+  border-bottom: 1px solid ${darkestBgColor};
   display: flex;
   justify-content: justify-content;
   height: ${({ headerHeight }) => headerHeight}rem;

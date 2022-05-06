@@ -15,7 +15,7 @@ export const SAppMain = styled.main`
 
   & > :first-child {
     flex-grow: 1;
-    padding-left: 2rem;
+    padding: 0 2rem;
   }
 
   & > :last-child {

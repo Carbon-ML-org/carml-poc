@@ -1,7 +1,9 @@
-import { Outlet } from "react-router-dom";
-
-function Products() {
-  return <Outlet />;
+function MessageTypes() {
+  return (
+    <div>
+      <p>Create Message Type here...</p>
+    </div>
+  );
 }
 
-export default Products;
+export default MessageTypes;

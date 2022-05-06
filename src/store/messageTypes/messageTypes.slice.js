@@ -15,7 +15,7 @@ const messageTypesSlice = createSlice({
         state.status = "loading";
       })
       .addCase(getMessageTypes.fulfilled, (state, action) => {
-        state.status = "sucess";
+        state.status = "success";
         state.messageTypes = action.payload;
       })
       .addCase(getMessageTypes.rejected, (state, action) => {

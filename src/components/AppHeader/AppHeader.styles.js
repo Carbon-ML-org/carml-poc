@@ -7,6 +7,7 @@ export const SAppHeader = styled(AppBar, {
   --app-header-margin-left: ${({ marginLeft }) => marginLeft}rem;
 
   background-color: #ffffff;
+  color: #000000;
   height: ${({ headerHeight }) => headerHeight}rem;
   margin-left: var(--app-header-margin-left);
   width: calc(100% - var(--app-header-margin-left));

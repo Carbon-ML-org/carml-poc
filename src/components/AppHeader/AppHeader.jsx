@@ -1,13 +1,25 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Toolbar, Typography } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 import UIElevationScroll from "../UIElevationScroll/UIElevationScroll";
+import { closeSidebar, openSidebar } from "../../store/ui/ui.actions";
 import { SAppHeader } from "./AppHeader.styles";
 
 function AppHeader() {
+  const dispatch = useDispatch();
   const { sidebarIsOpen, sidebarWidth, headerHeight } = useSelector(
     (state) => state.ui
   );
+
+  function handleMenuClick() {
+    if (sidebarIsOpen) {
+      dispatch(closeSidebar());
+    } else {
+      dispatch(openSidebar());
+    }
+  }
 
   return (
     <UIElevationScroll>
@@ -16,7 +28,17 @@ function AppHeader() {
         headerHeight={headerHeight}
       >
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="menu"
+            sx={{ mr: 2 }}
+            onClick={handleMenuClick}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             Message Type
           </Typography>
         </Toolbar>

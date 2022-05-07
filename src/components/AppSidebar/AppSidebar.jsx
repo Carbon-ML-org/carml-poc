@@ -14,7 +14,8 @@ function AppSidebar() {
       anchor="left"
       open={sidebarIsOpen}
       variant="persistent"
-      width={sidebarWidth}
+      width={sidebarIsOpen ? sidebarWidth : 0}
+      transitionDuration={{ appear: 0, enter: 0, exit: 0 }}
     >
       <SAppSidebarHeader headerHeight={headerHeight}>
         <AppUsername />

@@ -9,7 +9,7 @@ import { SAppHeader } from "./AppHeader.styles";
 
 function AppHeader() {
   const dispatch = useDispatch();
-  const { sidebarIsOpen, sidebarWidth, headerHeight } = useSelector(
+  const { sidebarIsOpen, sidebarWidth, headerHeight, pageTitle } = useSelector(
     (state) => state.ui
   );
 
@@ -39,7 +39,7 @@ function AppHeader() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            Message Type
+            {pageTitle}
           </Typography>
         </Toolbar>
       </SAppHeader>

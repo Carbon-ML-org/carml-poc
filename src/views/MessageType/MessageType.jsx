@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Box, CircularProgress } from "@mui/material";
-import { getMessageType } from "../../store/messageType/messageType.actions";
+import { getMessageType } from "../../store/messageTypes/messageTypes.actions";
 import UITableOfContents from "../../components/UITableOfContents/UITableOfContents";
 import MessageTypeForm from "./MessageTypeForm";
 import { useHeadings } from "../../hooks/useHeadings";
@@ -15,7 +15,9 @@ import useHeadingsObserver from "../../hooks/useHeadingsObserver";
 export default function MessageTypeView() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { messageType, status } = useSelector((state) => state.messageType);
+  const { activeMessageType, status } = useSelector(
+    (state) => state.messageTypes
+  );
   const [activeIds, setActiveIds] = useState([]);
   const { headings, resetHeadings } = useHeadings();
   useHeadingsObserver(setActiveIds, status === "success");
@@ -40,7 +42,7 @@ export default function MessageTypeView() {
           <UITableOfContents headings={headings} activeIds={activeIds} />
         </div>
         <MessageTypeForm
-          defaultValues={{ messageType }}
+          defaultValues={{ messageType: activeMessageType }}
           onSectionsChange={() => resetHeadings()}
         />
       </>

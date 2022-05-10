@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { INITIAL_STATE } from "./messageTypes.constants";
-import { getMessageTypes } from "./messageTypes.actions";
+import { getMessageTypes, getMessageType } from "./messageTypes.actions";
 
 const messageTypesSlice = createSlice({
   name: "messageTypes",
   initialState: INITIAL_STATE,
   extraReducers: (builder) => {
     /**
-     * Get Messages Type
+     * Get Message Types
      * ----------------------------------------------------------------
      */
     builder
@@ -19,6 +19,23 @@ const messageTypesSlice = createSlice({
         state.messageTypes = action.payload;
       })
       .addCase(getMessageTypes.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      });
+
+    /**
+     * Get Message Type
+     * ----------------------------------------------------------------
+     */
+    builder
+      .addCase(getMessageType.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(getMessageType.fulfilled, (state, action) => {
+        state.status = "success";
+        state.activeMessageType = action.payload;
+      })
+      .addCase(getMessageType.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       });

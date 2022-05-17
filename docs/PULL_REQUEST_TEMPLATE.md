@@ -15,5 +15,5 @@ Thank you for your contribution!
 Before submitting this PR please make sure:
 
 - [] Your code builds without errors or warnings
-- [] Your iplementation does not add vulnerabilities
+- [] Your implementation does not add vulnerabilities
 - [] New dependencies does not affected old ones

@@ -144,23 +144,23 @@ export default function MessageTypeForm({ defaultValues, onSectionsChange }) {
 
   return (
     <FormProvider {...methods}>
-      <Grid item xs={12}>
-        <Typography
-          variant="h3"
-          mb={2}
-          sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
-        >
-          PoC Message Type - General
-        </Typography>
-        <Typography variant="h5" component="div" mb={1}>
-          <SCode>{`<CarML>`}</SCode> Standard for CO2e Declaration
-        </Typography>
-        <Typography variant="body1" mb={2}>
-          Fields can be customized based on message type, product and/or
-          service.
-        </Typography>
-      </Grid>
       <SForm onSubmit={methods.handleSubmit(handleSubmit)}>
+        <Grid item xs={12}>
+          <Typography
+            variant="h3"
+            mb={2}
+            sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
+          >
+            PoC Message Type - General
+          </Typography>
+          <Typography variant="h5" component="div" mb={1}>
+            <SCode>{`<CarML>`}</SCode> Standard for CO2e Declaration
+          </Typography>
+          <Typography variant="body1" mb={2}>
+            Fields can be customized based on message type, product and/or
+            service.
+          </Typography>
+        </Grid>
         <Grid container spacing={2} mb={4}>
           <Grid item xs={12}>
             <Card sx={{ width: "100%" }}>

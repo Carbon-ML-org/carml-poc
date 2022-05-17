@@ -1,5 +1,6 @@
 export const INITIAL_STATE = {
-  messageType: {},
+  messageTypes: [],
+  activeMessageType: null,
   status: "idle",
   error: null,
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Box, Container, CircularProgress } from "@mui/material";
+import { Container } from "@mui/material";
 import MessageTypesTable from "./MessageTypesTable";
 import { getMessageTypes } from "../../store/messageTypes/messageTypes.actions";
 import { updatePageTitle } from "../../store/ui/ui.actions";
@@ -13,7 +13,9 @@ function MessageTypes() {
 
   useEffect(() => {
     dispatch(updatePageTitle("Message Types"));
-    dispatch(getMessageTypes());
+    setTimeout(() => {
+      dispatch(getMessageTypes());
+    }, 500);
   }, [dispatch]);
 
   const messageTypesRows = useMemo(
@@ -21,33 +23,17 @@ function MessageTypes() {
     [messageTypes]
   );
 
-  function renderResult() {
-    if (status === "success") {
-      return (
+  return (
+    <Container sx={{ mt: "2rem" }}>
+      {
         <MessageTypesTable
           columns={MESSAGE_TYPES_COLUMNS}
           rows={messageTypesRows}
+          status={status}
         />
-      );
-    } else if (status === "failed") {
-      return <p>Not found!</p>;
-    } else {
-      return (
-        <Box
-          sx={{
-            alignItems: "center",
-            display: "flex",
-            minHeight: "50rem",
-            justifyContent: "center",
-          }}
-        >
-          <CircularProgress />
-        </Box>
-      );
-    }
-  }
-
-  return <Container sx={{ mt: "2rem" }}>{renderResult()}</Container>;
+      }
+    </Container>
+  );
 }
 
 export default MessageTypes;

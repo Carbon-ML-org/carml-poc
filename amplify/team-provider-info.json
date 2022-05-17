@@ -15,11 +15,23 @@
       "function": {
         "carmlpocCommonDependencies": {
           "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
-          "s3Key": "amplify-builds/carmlpocCommonDependencies-LambdaLayerVersion00ce5bbd-build.zip"
+          "s3Key": "amplify-builds/carmlpocCommonDependencies-LambdaLayerVersion59dc56ea-build.zip"
         },
         "getProduct": {
           "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
           "s3Key": "amplify-builds/getProduct-3761646b2f5676765559-build.zip"
+        },
+        "messageTypes": {
+          "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
+          "s3Key": "amplify-builds/messageTypes-634a35736e5a576d3944-build.zip"
+        },
+        "handleMessageTypes": {
+          "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
+          "s3Key": "amplify-builds/handleMessageTypes-667769444858796b3061-build.zip"
+        },
+        "handleIndustries": {
+          "deploymentBucketName": "amplify-carmlpoc-dev-155942-deployment",
+          "s3Key": "amplify-builds/handleIndustries-31354762777448662b41-build.zip"
         }
       },
       "auth": {

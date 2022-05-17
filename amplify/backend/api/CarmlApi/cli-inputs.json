@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/message-types": {
+      "name": "/message-types",
+      "lambdaFunction": "handleMessageTypes",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/industries": {
+      "name": "/industries",
+      "lambdaFunction": "handleIndustries",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "name": "LEGO Star Wars Set",
+    "isVerified": true,
+    "hasCarbonCredit": true,
+    "id": "5d2656c0-1548-41ff-86a2-36f79ffd75ac",
+    "uniqueId": {
+      "uniqueIdSource": "GS1",
+      "type": "Bar Code",
+      "id": "67341934C267"
+    },
+    "amount": {
+      "amount": 0.015,
+      "declaredTrait": "CO2e",
+      "units": "KG"
+    },
+    "declaredTraitDataSource": {
+      "declaredTraitDataSource": "CarbonSig"
+    },
+    "declaredTraitMeasurementMethodology": {
+      "date": "Tue Mar 08 2022 11:50:00 GMT-0600 (Central Standard Time)",
+      "declaredTraitMeasurementMethod": "LCI",
+      "origin": "EU",
+      "methodology": "Toy 12345",
+      "calculation": "Cradle to gate"
+    },
+    "location": {
+      "locationType": "Location at point in time of declaration",
+      "address": "7190 Billund, Dinamarca",
+      "location": {
+        "lat": 55.7284,
+        "lng": 9.1124
+      }
+    },
+    "verifyingEntity": {
+      "declaredTraitVerifyingEntity": "Reuters",
+      "origin": "UK",
+      "company": "The LEGO Group 12345",
+      "credentials": "ISO Auditor",
+      "credentialsExpirationDate": "Sat Dec 31 2022 23:59:59 GMT-0600 (Central Standard Time)"
+    },
+    "carbonCredit": {
+      "vintageYear": "Mon Jan 01 2018 01:00:00 GMT-0600 (Central Standard Time)",
+      "id": "123456789",
+      "carbonOffsetAmount": 0.015
+    }
+  }
+]

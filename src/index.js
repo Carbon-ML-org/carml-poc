@@ -12,11 +12,6 @@ import { MUITheme } from "./theme";
 import store from "./store/store";
 import "./index.css";
 
-console.log(
-  "process.env.REACT_APP_ENV_API_KEY:",
-  process.env.REACT_APP_ENV_API_KEY
-);
-
 ReactDOM.render(
   <React.StrictMode>
     <ReduxProvider store={store}>
